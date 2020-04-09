@@ -7,4 +7,4 @@ git push
 cp ~/websites/config/zshrc ~/.zshrc 
 cp ~/websites/config/vimrc ~/.vimrc
 source ~/.zshrc
-reloadV
+echo "vimrc not auto loading"
