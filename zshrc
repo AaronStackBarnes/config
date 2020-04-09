@@ -37,7 +37,11 @@ alias maker="open -a 'MakerBot Print'"
 alias dockerStart="open -a 'Docker'"
 alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
-alias killallDocker="docker kill $(docker ps -q) && docker-compose down"
+
+killAllDocker(){
+ DOCKER_RUNNING=docker ps -q
+ docker kill $DOCKER_RUNNING
+}
 
 ds() {
     if [[ "$2" == "c" ]]; then
