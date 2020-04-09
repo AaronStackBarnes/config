@@ -40,7 +40,7 @@ alias mongoHub="open -a 'MongoHub'"
 
 killAllDocker(){
  DOCKER_RUNNING=docker ps -q
- if [ -z "$Docker" ]; then
+ if [ -z "$DOCKER_RUNNING" ]; then
   docker kill $DOCKER_RUNNING
  fi
  docker-compose down
