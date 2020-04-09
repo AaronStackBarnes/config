@@ -1,10 +1,7 @@
-#!/bin/zsh 
-
 git add -A
 git commit -am "update"
 git push 
 
 cp ~/websites/config/zshrc ~/.zshrc 
 cp ~/websites/config/vimrc ~/.vimrc
-source ~/.zshrc
-echo "vimrc not auto loading"
+echo "vimrc and .zshrc not auto loading"

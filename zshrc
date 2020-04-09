@@ -47,6 +47,14 @@ killallServers(){
  killall node
 }
 
+sbDBDump(){
+  ssh-add -K ~/.ssh/do && ssh -t root@174.138.37.192 'mongoexport  --db=bullets --collection=posts --type csv --fields text,type,platform --out ~/dbDump.csv'
+  sleep 5
+  scp root@174.138.37.192:~/dbDump.csv ~/websites/socialBullets/dbDump.csv
+  sleep 15 
+  ssh -t root@174.138.37.192 'rm ~/dbDump.csv'
+}
+
 ds() {
     if [[ "$2" == "c" ]]; then
       cat ~/.note-pad.md && sleep 3 && coms    
