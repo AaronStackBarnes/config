@@ -62,7 +62,7 @@ ds() {
     elif [[ "$1" == "sb" ]]; then 
       mongoHub && cd ~/websites/SocialBullets/server/ && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
     elif [[ "$1" == "o" ]]; then 
-      cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && osascript ~/websites/config/openTabWithDevStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
+      postman && cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && osascript ~/websites/config/openTabWithDevStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
     fi
 }
 
