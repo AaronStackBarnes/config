@@ -4,5 +4,4 @@ git push
 
 cp ~/websites/config/zshrc ~/.zshrc 
 cp ~/websites/config/vimrc ~/.vimrc
-source ~/.zshrc
-echo "vimrc not auto loading close terminal to source"
+echo "vimrc and zshrc not auto loading close terminal to source"
