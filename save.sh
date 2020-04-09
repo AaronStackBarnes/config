@@ -4,4 +4,4 @@ git push
 
 cp ~/websites/config/zshrc ~/.zshrc 
 cp ~/websites/config/vimrc ~/.vimrc
-source ~/.zshrc 
+reloadZ
