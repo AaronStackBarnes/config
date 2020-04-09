@@ -56,7 +56,7 @@ ds() {
     elif [[ "$1" == "st" ]]; then 
       zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
     elif [[ "$1" == "cs" ]]; then 
-      cd ~/websites/cfl-server  && dockerStart && sleep 5 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
+      cd ~/websites/cfl-server  && dockerStart && sleep 5 && killAllDocker && sleep 4 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
     elif [[ "$1" == "ca" ]]; then 
       zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
     elif [[ "$1" == "sb" ]]; then 
