@@ -52,7 +52,7 @@ ds() {
     fi
 
     if [[ "$1" == "ss" ]]; then
-       zeplin && cd ~/websites/rackett/app && xcode ~/websites/rackett/app/ios/see-sound.xcworkspace && osascript ~/websites/config/openTabWithStart.scpt  
+       zeplin && cd ~/websites/rackett/app && xcode ~/websites/rackett/app/ios/see-sound.xcworkspace && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt  
     elif [[ "$1" == "st" ]]; then 
       zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
     elif [[ "$1" == "cs" ]]; then 
@@ -60,9 +60,9 @@ ds() {
     elif [[ "$1" == "ca" ]]; then 
       zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
     elif [[ "$1" == "sb" ]]; then 
-      mongoHub && cd ~/websites/SocialBullets/server/ && osascript ~/websites/config/openTabWithVim.scpt && osascript ~/websites/config/openTabWithStart.scpt
+      mongoHub && cd ~/websites/SocialBullets/server/ && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
     elif [[ "$1" == "o" ]]; then 
-      cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && osascript ~/websites/config/openTabWithVim.scpt && osascript ~/websites/config/openTabWithDevStart.scpt
+      cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && osascript ~/websites/config/openTabWithDevStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
     fi
 }
 
