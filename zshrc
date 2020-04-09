@@ -52,7 +52,7 @@ ds() {
       cat ~/.note-pad.md && sleep 3 && coms    
     fi
     
-    osascript /websites/config/$1.scpt 
+    osascript ~/websites/config/$1.scpt 
 }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
