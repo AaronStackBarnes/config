@@ -37,7 +37,7 @@ alias maker="open -a 'MakerBot Print'"
 alias dockerStart="open -a 'Docker'"
 alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
-alias reloadZ="source ~/.zshrc"
+alias reloadV="source ~/.vimrc"
 
 
 killallDocker(){
