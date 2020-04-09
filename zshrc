@@ -25,7 +25,7 @@ alias sshdo="ssh-add -K ~/.ssh/do && ssh root@167.99.235.109"
 alias sshs="ssh-add -K ~/.ssh/do && ssh root@167.99.235.109"
 alias sshb="ssh-add -K ~/.ssh/do && ssh root@174.138.37.192"
 alias chrome="open -a 'Google Chrome'"
-alias coms="cat ~/.note-pad.md && sleep 3 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
+alias coms="mdcat ~/.note-pad.md && sleep 3 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias myip="ipconfig getifaddr en0"
 alias gsu="git stash -u"
 alias gsp="git stash pop"
@@ -57,7 +57,7 @@ sbDBDump(){
 
 ds() {
     if [[ "$2" == "c" ]]; then
-      cat ~/.note-pad.md && sleep 3 && coms    
+      mdcat ~/.note-pad.md && sleep 3 && coms    
     fi
     
     osascript ~/websites/config/$1.scpt 
