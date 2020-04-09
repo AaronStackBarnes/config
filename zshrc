@@ -37,6 +37,7 @@ alias maker="open -a 'MakerBot Print'"
 alias dockerStart="open -a 'Docker'"
 alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
+alias killallDocker="docker kill $(docker ps -q) && docker-compose down"
 
 ds() {
     if [[ "$2" == "c" ]]; then
@@ -48,7 +49,7 @@ ds() {
     elif [[ "$1" == "st" ]]; then 
       zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
     elif [[ "$1" == "cs" ]]; then 
-      cd ~/websites/cfl-server  && dockerStart && sleep 5 && docker kill $(docker ps -q) && docker-compose down && sleep 1 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
+      cd ~/websites/cfl-server  && dockerStart && sleep 5 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
     elif [[ "$1" == "ca" ]]; then 
       zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
     elif [[ "$1" == "sb" ]]; then 
