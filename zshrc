@@ -51,20 +51,8 @@ ds() {
     if [[ "$2" == "c" ]]; then
       cat ~/.note-pad.md && sleep 3 && coms    
     fi
-
-    if [[ "$1" == "ss" ]]; then
-       zeplin && cd ~/websites/rackett/app && xcode ~/websites/rackett/app/ios/see-sound.xcworkspace && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt  
-    elif [[ "$1" == "st" ]]; then 
-      zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
-    elif [[ "$1" == "cs" ]]; then 
-      cd ~/websites/cfl-server  && dockerStart && sleep 5 && killallServers && sleep 4 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
-    elif [[ "$1" == "ca" ]]; then 
-      zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
-    elif [[ "$1" == "sb" ]]; then 
-      mongoHub && cd ~/websites/SocialBullets/server/ && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
-    elif [[ "$1" == "o" ]]; then 
-      postman && cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && sleep 1 && osascript ~/websites/config/openTabWithDevStart.scpt && osascript ~/websites/config/openTabWithVim.scpt 
-    fi
+    
+    osascript "~/websites/config/""$2"".scpt" 
 }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
