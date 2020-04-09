@@ -47,8 +47,10 @@ ds() {
        zeplin && cd ~/websites/rackett/app && xcode ~/websites/rackett/app/ios/see-sound.xcworkspace && osascript ~/websites/config/openTabWithStart.scpt  
     elif [[ "$1" == "st" ]]; then 
       zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
-    elif [[ "$1" == "c" ]]; then 
-      zeplin && cd ~/websites/cfl-server && dockerStart && sleep 5 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
+    elif [[ "$1" == "cs" ]]; then 
+      cd ~/websites/cfl-server  && dockerStart && sleep 5 && docker kill $(docker ps -q) && docker-compose down && sleep 1 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
+    elif [[ "$1" == "ca" ]]; then 
+      zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
     elif [[ "$1" == "sb" ]]; then 
       mongoHub && cd ~/websites/SocialBullets/server/ && osascript ~/websites/config/openTabWithVim.scpt && osascript ~/websites/config/openTabWithStart.scpt
     elif [[ "$1" == "o" ]]; then 
