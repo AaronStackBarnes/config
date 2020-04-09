@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-git commit -am "'$@'"
+git add -A
+git commit -am "update"
 git push 
 
-cp ./zshrc ~/.zshrc 
-cp ./vimrc ~/.vimrc
+cp ~/websites/config/zshrc ~/.zshrc 
+cp ~/websites/config/vimrc ~/.vimrc

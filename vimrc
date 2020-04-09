@@ -10,14 +10,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
-
 
 let g:prettier#quickfix_enabled = 0
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.php,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 "nerd tree stuff 
 let g:netrw_banner = 0
@@ -58,3 +57,22 @@ let g:coc_snippet_next = '<tab>'
 :set smartindent
 :set number
 
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <F5> :set hlsearch! hlsearch?<CR>
+:noremap <F7> :GoLint<CR>
+:noremap <F8> :GoRun<CR>
+
+
+" Toggle spellchecking
+function! ToggleSpellCheck()
+  set spell!
+  if &spell
+    echo "Spellcheck ON"
+  else
+    echo "Spellcheck OFF"
+  endif
+endfunction
+
+:noremap <F4> :call ToggleSpellCheck()<CR>
+
+:set foldmethod=manual
