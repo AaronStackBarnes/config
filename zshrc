@@ -39,12 +39,11 @@ alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
 
 killAllDocker(){
- DOCKER_RUNNING=docker ps -q
- read DOCKER_RUNNING
- if [ ${#DOCKER_RUNNING} -ge 5  ]; then
-  docker kill $DOCKER_RUNNING
- fi
- docker-compose down
+ docker stop $(docker ps -a -q) &
+ sleep 1
+ docker rm $(docker ps -a -q) &
+ sleep 2
+ docker-compose down &
 }
 
 ds() {
