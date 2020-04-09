@@ -76,7 +76,7 @@ endfunction
 " reload vimrc on vimrc change
 augroup myvimrc
     au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so ~/.vimrc | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
 :noremap <F4> :call ToggleSpellCheck()<CR>
