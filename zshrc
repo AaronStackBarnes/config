@@ -38,12 +38,13 @@ alias dockerStart="open -a 'Docker'"
 alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
 
-killallDocker(){
+killallServers(){
  docker stop $(docker ps -a -q) &
  sleep 1
  docker rm $(docker ps -a -q) &
  sleep 2
  docker-compose down &
+ killall node
 }
 
 ds() {
@@ -56,7 +57,7 @@ ds() {
     elif [[ "$1" == "st" ]]; then 
       zeplin && cd ~/websites/stamps/stampsApp && osascript ~/websites/config/openTab.scpt && sshdo
     elif [[ "$1" == "cs" ]]; then 
-      cd ~/websites/cfl-server  && dockerStart && sleep 5 && killallDocker && sleep 4 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
+      cd ~/websites/cfl-server  && dockerStart && sleep 5 && killallServers && sleep 4 && docker-compose up -d && osascript ~/websites/config/openTabWithStart.scpt     
     elif [[ "$1" == "ca" ]]; then 
       zeplin && cd ~/websites/cfl-application && osascript ~/websites/config/openTabWithStart.scpt && osascript ~/websites/config/openTabWithVim.scpt
     elif [[ "$1" == "sb" ]]; then 
