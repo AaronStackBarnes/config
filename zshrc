@@ -57,7 +57,7 @@ sbDBDump(){
 
 ds() {
     if [[ "$2" == "c" ]]; then
-      coms    
+      coms && google     
     fi
     
     osascript ~/websites/config/$1.scpt 
