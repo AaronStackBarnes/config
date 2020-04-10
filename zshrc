@@ -57,7 +57,7 @@ sbDBDump(){
 
 ds() {
     if [[ "$2" == "c" ]]; then
-      mdcat ~/.note-pad.md && sleep 3 && coms    
+      coms    
     fi
     
     osascript ~/websites/config/$1.scpt 
