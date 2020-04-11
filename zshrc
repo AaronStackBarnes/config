@@ -20,10 +20,11 @@ alias co="git checkout"
 alias fuckdsstore="rmdsstore"
 alias notes="vim ~/.note-pad.md"
 alias https="~/.ngrok http"
+alias mainKey="ssh-add -K ~/.ssh/do"
 alias sshracket="ssh-add -K ~/.ssh/do && ssh astack@54.174.19.177"
-alias sshdo="ssh-add -K ~/.ssh/do && ssh root@167.99.235.109"
-alias sshs="ssh-add -K ~/.ssh/do && ssh root@167.99.235.109"
-alias sshb="ssh-add -K ~/.ssh/do && ssh root@174.138.37.192"
+alias sshdo="mainKey && ssh root@167.99.235.109"
+alias sshs=" mainKey && ssh root@167.99.235.109"
+alias sshb="mainKey && ssh root@174.138.37.192"
 alias chrome="open -a 'Google Chrome'"
 alias coms="mdcat ~/.note-pad.md && sleep 3 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias myip="ipconfig getifaddr en0"
@@ -60,7 +61,7 @@ ds() {
       coms && google     
     fi
     
-    osascript ~/websites/config/$1.scpt 
+    mainKey && osascript ~/websites/config/$1.scpt 
 }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
