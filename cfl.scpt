@@ -15,7 +15,7 @@ tell application "iTerm2"
         set _new_session to last item of sessions
     end tell
     tell _new_session
-        write text "zeplin && cd ~/websites/cfl-application && yarn start" 
+        write text "zeplin && cd ~/websites/cfl-application" 
     end tell
     tell current window
         create tab with default profile
