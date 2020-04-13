@@ -24,7 +24,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
-:let g:NERDTreeWinSize=160
+:let g:NERDTreeWinSize=180
 
 
 nmap <F6> :NERDTreeToggle<CR>

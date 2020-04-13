@@ -24,6 +24,6 @@ tell application "iTerm2"
         set _new_session to last item of sessions
     end tell
     tell _new_session
-        write text "echo 'do good work'"  
+        write text "cd ~/websites/scamstopper/app/ && echo 'do good work'"  
     end tell
 end tell
