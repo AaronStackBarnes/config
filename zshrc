@@ -12,32 +12,37 @@ plugins=(git web-search zsh-autosuggestions osx)
 
 source $ZSH/oh-my-zsh.sh
 
-alias zeplin="open -a 'Zeplin'"
-alias blender="open -a 'Blender'"
-alias cura="open -a 'Ultimaker Cura'"
 alias hg="history | grep"
-alias co="git checkout"
+alias coms="mdcat ~/.note-pad.md && sleep 2 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias fuckdsstore="rmdsstore"
 alias notes="vim ~/.note-pad.md"
-alias https="~/.ngrok http"
+alias configE="vim ~/websites/config"
+alias configS="~/websites/config/save.sh"
+
 alias mainKey="ssh-add -K ~/.ssh/do"
 alias sshracket="ssh-add -K ~/.ssh/do && ssh astack@54.174.19.177"
 alias sshdo="mainKey && ssh root@167.99.235.109"
 alias sshs=" mainKey && ssh root@167.99.235.109"
 alias sshb="mainKey && ssh root@174.138.37.192"
-alias chrome="open -a 'Google Chrome'"
-alias coms="mdcat ~/.note-pad.md && sleep 2 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias myip="ipconfig getifaddr en0"
+
+alias co="git checkout"
 alias gsu="git stash -u"
 alias gsp="git stash pop"
 alias gsc="git stash clear"
-alias cdwb="cd ~/websites/"
+
+alias https="~/.ngrok http"
+
+alias chrome="open -a 'Google Chrome'"
 alias xcode="open -a 'Xcode'"
 alias android="open -a 'Android Studio'"
 alias maker="open -a 'MakerBot Print'"
 alias dockerStart="open -a 'Docker'"
 alias postman="open -a 'Postman'"
 alias mongoHub="open -a 'MongoHub'"
+alias zeplin="open -a 'Zeplin'"
+alias blender="open -a 'Blender'"
+alias cura="open -a 'Ultimaker Cura'"
 
 killallServers(){
  docker stop $(docker ps -a -q) &
