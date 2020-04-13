@@ -18,24 +18,32 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.php,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-"nerd tree stuff 
+" nerd tree stuff 
 let g:netrw_banner = 0
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
+:let g:NERDTreeWinSize=200
+
+
 nmap <F6> :NERDTreeToggle<CR>
 
 function! StartUp()
-    if 0 == argc()
+    if !argc() && !exists("s:std_in")
         NERDTree
+    end
+    if argc() && isdirectory(argv()[0]) && !exists("s:std_in")
+        exe 'NERDTree' argv()[0]
+        wincmd p
+        ene
     end
 endfunction
 
+autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * call StartUp()
 
-"auto window for auto complete
+" auto window for auto complete
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
