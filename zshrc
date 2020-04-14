@@ -13,7 +13,7 @@ plugins=(git web-search zsh-autosuggestions osx)
 source $ZSH/oh-my-zsh.sh
 
 alias hg="history | grep"
-alias coms="mdcat ~/.note-pad.md && sleep 2 && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
+alias coms="open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias fuckdsstore="rmdsstore"
 alias notes="vim ~/.note-pad.md"
 alias configE="cd ~/websites/config && vim"
