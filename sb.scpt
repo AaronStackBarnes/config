@@ -1,9 +1,9 @@
 tell application "iTerm2"
     tell current window
-        write text "ssh -t root@174.138.37.192 'cd socialBullets/; pm2 logs; exec $SHELL'"  
         create tab with default profile
     end tell
     tell current tab of current window
+        write text "ssh -t root@174.138.37.192 'cd socialBullets/; pm2 logs; exec $SHELL'"  
         set _new_session to last item of sessions
     end tell
     tell _new_session

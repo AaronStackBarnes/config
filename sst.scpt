@@ -1,9 +1,9 @@
 tell application "iTerm2"
     tell current window
-        write text "cd ~/websites/scamstopper/app/ && yarn start"  
         create tab with default profile
     end tell
     tell current tab of current window
+        write text "cd ~/websites/scamstopper/app/ && yarn start"  
         set _new_session to last item of sessions
     end tell
     tell _new_session

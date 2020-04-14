@@ -1,9 +1,9 @@
 tell application "iTerm2"
      tell current window
-        write text "chrome http://167.99.235.109/portal/ &&  zeplin && cd ~/websites/stamps/stampsApp/ && yarn start"  
         create tab with default profile
     end tell
     tell current tab of current window
+        write text "chrome http://167.99.235.109/portal/ &&  zeplin && cd ~/websites/stamps/stampsApp/ && yarn start"  
         set _new_session to last item of sessions
     end tell
     tell _new_session
