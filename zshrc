@@ -66,7 +66,7 @@ ds() {
       coms && google     
     fi
     
-    mainKey && osascript ~/websites/config/$1.scpt 
+    sshKey && osascript ~/websites/config/$1.scpt 
 }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
