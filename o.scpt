@@ -1,6 +1,6 @@
 tell application "iTerm2"
     tell current session of current window
-        write text "postman && cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && dockerStart && sleep 10 && docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" 
+        write text "postman && cd ~/websites/opicipone/neuro-opicapone-na-hcp-email-epsilon && dockerStart && echo 'docker-compose -f docker-compose.yml -f docker-compose.dev.yml up'" 
     end tell
     tell current window
         create tab with default profile
