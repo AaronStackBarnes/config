@@ -1,6 +1,6 @@
 tell application "iTerm2"
     tell current session of current window
-        write text "cd ~/websites/cfl-server  && dockerStart && sleep 5 && killallServers && sleep 4 && docker-compose up -d && yarn start" 
+        write text "echo 'cd ~/websites/cfl-server  && dockerStart && sleep 5 && killallServers && sleep 4 && docker-compose up -d && yarn start'" 
     end tell
     tell current window
         create tab with default profile
