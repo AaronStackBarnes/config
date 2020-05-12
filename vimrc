@@ -28,6 +28,7 @@ let NERDTreeShowHidden=1
 
 
 nmap <F6> :NERDTreeToggle<CR>
+nmap <F7> :!reset<CR>
 
 function! StartUp()
     if !argc() && !exists("s:std_in")
