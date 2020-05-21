@@ -29,7 +29,6 @@ let NERDTreeShowHidden=1
 
 nmap <F6> :NERDTreeToggle<CR>
 nmap <F9> :!reset<CR>
-
 function! StartUp()
     if !argc() && !exists("s:std_in")
         NERDTree
@@ -61,10 +60,10 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 " smart indenting
-:set shiftwidth=2
-:set autoindent
-:set smartindent
-:set number
+" :set shiftwidth=2
+" :set autoindent
+" :set smartindent
+" :set number
 
 " Press F4 to toggle highlighting on/off, and show current value.
 :noremap <F5> :set hlsearch! hlsearch?<CR>
