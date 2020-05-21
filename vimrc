@@ -18,13 +18,22 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.php,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
 " nerd tree stuff 
 let g:netrw_banner = 0
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
-:let g:NERDTreeWinSize=60
+let g:NERDTreeWinSize=60
 
 
 nmap <F6> :NERDTreeToggle<CR>
@@ -60,10 +69,10 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 " smart indenting
-" :set shiftwidth=2
-" :set autoindent
-" :set smartindent
-" :set number
+ :set shiftwidth=2
+ :set autoindent
+ :set smartindent
+ :set number
 
 " Press F4 to toggle highlighting on/off, and show current value.
 :noremap <F5> :set hlsearch! hlsearch?<CR>
