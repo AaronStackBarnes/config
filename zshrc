@@ -26,6 +26,7 @@ alias sshs=" sshKey && ssh root@167.99.235.109"
 alias sshb="sshKey && ssh root@174.138.37.192"
 alias myip="ipconfig getifaddr en0"
 
+alias gCount="git ls-files | while read f; do git blame --line-porcelain $f | grep '^author '; done | sort -f | uniq -ic | sort -n"
 alias co="git checkout"
 alias gsu="git stash -u"
 alias gsp="git stash pop"
