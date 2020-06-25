@@ -34,6 +34,7 @@ alias gsc="git stash clear"
 
 alias https="~/.ngrok http"
 
+alias expoClear="xcrun simctl erase all"
 alias chrome="open -a 'Google Chrome'"
 alias xcode="open -a 'Xcode'"
 alias android="open -a 'Android Studio'"
