@@ -14,6 +14,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chrisbra/csv.vim'
 call plug#end()
 
+:filetype plugin on
+
 let g:prettier#quickfix_enabled = 0
 
 let g:prettier#autoformat = 0
