@@ -11,6 +11,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 let g:prettier#quickfix_enabled = 0
