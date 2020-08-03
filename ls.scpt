@@ -1,6 +1,6 @@
 tell application "iTerm2"
     tell current session of current window
-        write text "cd ~/websites/lil-sugar && yarn start" 
+        write text "zeplin && cd ~/websites/lil-sugar && yarn start" 
     end tell
     tell current window
         create tab with default profile
