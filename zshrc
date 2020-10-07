@@ -45,6 +45,7 @@ alias mongoHub="open -a 'MongoHub'"
 alias zeplin="open -a 'Zeplin'"
 alias blender="open -a 'Blender'"
 alias cura="open -a 'Ultimaker Cura'"
+alias cura="open -a 'Unity Hub'"
 
 killallServers(){
  docker stop $(docker ps -a -q) &
