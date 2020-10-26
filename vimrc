@@ -12,6 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chrisbra/csv.vim'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 :filetype plugin on
@@ -20,6 +21,8 @@ let g:prettier#quickfix_enabled = 0
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.php,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+autocmd BufWritePre *.cs OmniSharpCodeFormatp
 
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
