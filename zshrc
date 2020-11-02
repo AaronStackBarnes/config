@@ -12,10 +12,6 @@ plugins=(git web-search zsh-autosuggestions osx)
 
 source $ZSH/oh-my-zsh.sh
 
-alias updateTimeSheets="scp ~/.time_sheets/config.json root@167.99.235.109:~/.tmp/config.json && scp ~/.time_sheets/schedule.json root@167.99.235.109:~/.tmp/schedule.json"
-alias stopTimeSheets="osascript ~/websites/config/stopTimeSheets.scpt"
-alias startTimeSheets="osascript ~/websites/config/startTimeSheets.scpt"
-
 alias hg="history | grep"
 alias coms="open -a 'Slack' && open -a 'Microsoft Outlook' && open -a 'Microsoft Teams'"
 alias fuckdsstore="rmdsstore"
