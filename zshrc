@@ -73,7 +73,7 @@ ds() {
 }
 
 timeSheets() {
-   "osascript ~/websites/config/${1}TimeSheets.scpt" 
+   osascript "~/websites/config/${1}TimeSheets.scpt" 
 }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
