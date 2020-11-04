@@ -72,6 +72,10 @@ ds() {
     sshKey && osascript ~/websites/config/$1.scpt 
 }
 
+timeSheets() {
+   "osascript ~/websites/config/${1}TimeSheets.scpt" 
+}
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/Users/aaron.stack/miniconda3/bin:$PATH"
