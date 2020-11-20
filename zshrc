@@ -56,7 +56,7 @@ timeISaved(){
    
   echo "minutes: $(($1 * 261 ))"
   echo "hours: $(($1 * 261 / 60))"
-  echo "work days: $(($1 * 261 / 60 / 8))"
+  echo "work days: $(($1 * 261 / 480))"
 }
 
 killallServers(){
