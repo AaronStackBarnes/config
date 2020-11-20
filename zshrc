@@ -52,8 +52,7 @@ wamin(){
 }
 
 timeISaved(){
-  a=$(2 '*' "$1"  )
-  echo "$a"
+  echo "$(($1 * 5))"
 }
 
 killallServers(){
