@@ -52,7 +52,11 @@ wamin(){
 }
 
 timeISaved(){
-  echo "$(($1 * 5))"
+  figlet "Time Saved" | lolcat
+   
+  echo "minutes: $(($1 * 261 ))"
+  echo "hours: $(($1 * 261 / 60))"
+  echo "days: $(($1 * 261 / 60 / 24))"
 }
 
 killallServers(){
