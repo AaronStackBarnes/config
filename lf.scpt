@@ -9,6 +9,6 @@ tell application "iTerm2"
         set _new_session to last item of sessions
     end tell
     tell _new_session
-        write text "cd ~/websites/LookingForwardARFilter && xed build/Unity-iPhone.xcodeproj && mdcat ~/.note-pad.md && figlet 'Looking Forward AR Filter' | lolcat" 
+        write text "cd ~/websites/LookingForwardARFilter && xed build/Unity-iPhone.xcodeproj && mdcat ~/README.md && wamin" 
     end tell
 end tell

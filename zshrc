@@ -46,6 +46,7 @@ alias zeplin="open -a 'Zeplin'"
 alias blender="open -a 'Blender'"
 alias cura="open -a 'Ultimaker Cura'"
 alias unity="open -a 'Unity Hub'"
+alias wamin="basename "$PWD" | lolcat"
 
 killallServers(){
  docker stop $(docker ps -a -q) &

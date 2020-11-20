@@ -18,6 +18,6 @@ tell application "iTerm2"
         set _new_session to last item of sessions
     end tell
     tell _new_session
-        write text "cd ~/websites/scamstopper/app/ && figlet 'Scam Stopper' | lolcat && mdcat ~/.note-pad.md"  
+        write text "cd ~/websites/scamstopper/app/ && mdcat ~/README.md && wamin"  
     end tell
 end tell
