@@ -48,7 +48,12 @@ alias cura="open -a 'Ultimaker Cura'"
 alias unity="open -a 'Unity Hub'"
 
 wamin(){
-printf '%q\n' ${PWD##*/} | figlet | lolcat
+  printf '%q\n' ${PWD##*/} | figlet | lolcat
+}
+
+timeISaved(){
+  a=$(2 '*' "$1"  )
+  echo "$a"
 }
 
 killallServers(){
