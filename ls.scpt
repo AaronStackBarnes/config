@@ -18,6 +18,6 @@ tell application "iTerm2"
         set _new_session to last item of sessions
     end tell
     tell _new_session
-        write text "cd ~/websites/lil-sugar && mdcat ~/README.md && wamin" 
+        write text "cd ~/websites/lil-sugar && mdcat ~/websites/lil-sugar/README.md && wamin" 
     end tell
 end tell
