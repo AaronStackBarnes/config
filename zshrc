@@ -33,6 +33,7 @@ alias gsp="git stash pop"
 alias gsc="git stash clear"
 
 alias https="~/.ngrok http"
+alias mongod="mongod --dbpath ~/data/db"
 
 alias expoClear="xcrun simctl erase all"
 alias chrome="open -a 'Google Chrome'"
